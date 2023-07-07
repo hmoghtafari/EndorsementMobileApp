@@ -25,15 +25,17 @@ publishBtn.addEventListener("click", function(){
 
 onValue(endorsementListInDB, function(snapshot){
     if (snapshot.exists()){
-        let itemArrey = Object.entries(snapshot.val())
+        let itemArray = Object.entries(snapshot.val())
+        let reversedArray = itemArray.reverse(); // Reverse the array
+
         // console.log(itemArrey)
         
     removeEndorsementList()
     
-    for(let i = 0 ; i < itemArrey.length ; i++) {
-        let currentItems = itemArrey[i]
-        let currentItemsID = itemArrey[0]
-        let currentItemsValue = itemArrey[1]
+    for(let i = 0 ; i < reversedArray.length ; i++) {
+        let currentItems = reversedArray[i]
+        let currentItemsID = currentItems[0]
+        let currentItemsValue = currentItems[1]
         
         appendItemsToEndorsementList(currentItems)
     }
