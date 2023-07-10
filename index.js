@@ -15,7 +15,14 @@ const publishBtn = document.getElementById("publish-btn")
 const endorsementListEl = document.getElementById("endorsement-el")
 
 publishBtn.addEventListener("click", function(){
-    let inputEldata = inputEl.value 
+    // let inputEldata = inputEl.value 
+    let inputEldata = inputEl.value.trim(); // Trim any whitespace
+    
+    if (inputEldata === "") {
+        // Display error message
+        alert("The box should not be empty");
+        return; // Stop further execution
+    }
     // console.log(inputEldata)
     push(endorsementListInDB, inputEldata)
     // endorsementListEl.innerHTML += `<li>${inputEldata}</li>`
