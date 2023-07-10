@@ -5,12 +5,15 @@ html, body {
     background-color: #1B1924;
     text-align: center;
 }
+.title{
+    color: whitesmoke;
+}
 .container {
     display: flex;
     flex-direction: column;
     max-width: 320px;
     margin: 30px auto;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 img {
@@ -19,7 +22,7 @@ img {
 }
 #input-txt{
     background-color: #444059;
-    height: 55px;
+    height: 80px;
     padding: 10px;
     border-radius: 8px;
     border: none;
@@ -28,15 +31,22 @@ img {
     row-gap: "5";
     
 }
+#publish-btn{
+    padding: 10px 15px;
+    font-size: 25px;
+    border-radius: 5px;
+}
 ul{
+    margin: 0;
     list-style-type: none;
     padding: 0;
     color: white;
 }
 ul li{
-    background-color: aqua;
-    margin: 2px;
+    background-color: rgb(91, 119, 242);
+    margin: 3px;
     padding: 5px;
+    border-radius: 5px;
 }
 h1{
     font-size: 25px;
