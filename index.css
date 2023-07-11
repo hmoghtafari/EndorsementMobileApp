@@ -5,6 +5,7 @@ html, body {
     background-color: #1B1924;
     text-align: center;
     color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container {
@@ -49,4 +50,7 @@ ul li{
 }
 h1{
     font-size: 25px;
+}
+h2{
+    margin: 0;
 }
