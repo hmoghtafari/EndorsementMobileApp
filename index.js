@@ -46,8 +46,8 @@ onValue(endorsementListInDB, function (snapshot) {
 
     for (let i = 0; i < reversedArray.length; i++) {
       let currentItems = reversedArray[i];
-      let currentItemsID = currentItems[0];
-      let currentItemsValue = currentItems[1];
+      // let currentItemsID = currentItems[0];
+      // let currentItemsValue = currentItems[1];
 
       appendItemsToEndorsementList(currentItems);
     }
