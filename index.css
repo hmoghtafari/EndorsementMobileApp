@@ -33,10 +33,11 @@ img {
   color: #8f8f8f;
   row-gap: "5";
 }
-#publish-btn {
+#publish-btn, #delete-all-btn{
   padding: 10px 15px;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 5px;
+  height: auto;
 }
 ul {
   margin: 0;
