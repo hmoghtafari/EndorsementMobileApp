@@ -14,10 +14,12 @@ const appSettings = {
 const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const endorsementListInDB = ref(database, "endorsementList");
-
+const deleteAllData = document.getElementById("delete-all-btn")
 const inputEl = document.getElementById("input-txt");
 const publishBtn = document.getElementById("publish-btn");
 const endorsementListEl = document.getElementById("endorsement-el");
+
+deleteAllData.style.display = "none"
 
 inputEl.addEventListener("input", function () {
   let inputEldata = inputEl.value.trim(); // Trim any whitespace
@@ -53,8 +55,10 @@ onValue(endorsementListInDB, function (snapshot) {
 
       appendItemsToEndorsementList(currentItems);
     }
+    deleteAllData.style.display="block"
   } else {
     endorsementListEl.innerHTML = "No items here... yet";
+    deleteAllData.style.display = "none";
   }
 });
 function removeEndorsementList() {
@@ -63,6 +67,10 @@ function removeEndorsementList() {
 function clearInputEl() {
   inputEl.value = "";
 }
+
+deleteAllData.addEventListener("click", function(){
+    remove(endorsementListInDB);
+})
 
 function appendItemsToEndorsementList(item) {
   let itemId = item[0];
