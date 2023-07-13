@@ -38,6 +38,8 @@ img {
   font-size: 20px;
   border-radius: 5px;
   height: auto;
+  display: inline-block;
+  width: 130px;
 }
 ul {
   margin: 0;
