@@ -42,6 +42,7 @@ publishBtn.addEventListener("click", function () {
 });
 
 onValue(endorsementListInDB, function (snapshot) {
+    publishBtn.disabled = true
   if (snapshot.exists()) {
     let itemArray = Object.entries(snapshot.val());
     let reversedArray = itemArray.reverse(); // Reverse the array
@@ -55,7 +56,7 @@ onValue(endorsementListInDB, function (snapshot) {
 
       appendItemsToEndorsementList(currentItems);
     }
-    deleteAllData.style.display="block"
+    deleteAllData.style.display="inline-block"
   } else {
     endorsementListEl.innerHTML = "No items here... yet";
     deleteAllData.style.display = "none";
