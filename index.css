@@ -37,9 +37,10 @@ img {
   padding: 10px 15px;
   font-size: 20px;
   border-radius: 5px;
-  height: auto;
+  /* height: auto; */
   display: inline-block;
   width: 130px;
+  /* margin: auto; */
 }
 ul {
   margin: 0;
